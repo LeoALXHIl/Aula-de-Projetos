@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'theme_settings_screen.dart';
+import 'add_medication_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,6 +42,12 @@ class HomeScreen extends StatelessWidget {
                 ),
                 _buildNavigationButton(
                   context,
+                  icon: Icons.assignment,
+                  label: 'Cadastro Completo',
+                  destination: AddMedicationScreen(), // tela detalhada
+                ),
+                _buildNavigationButton(
+                  context,
                   icon: Icons.list,
                   label: 'Lista',
                   destination: MedicationListScreen(),
@@ -61,6 +69,12 @@ class HomeScreen extends StatelessWidget {
                   icon: Icons.info,
                   label: 'Sobre',
                   destination: AboutScreen(),
+                ),
+                _buildNavigationButton(
+                  context,
+                  icon: Icons.color_lens,
+                  label: 'Tema',
+                  destination: ThemeSettingsScreen(),
                 ),
               ],
             ),
